@@ -1,11 +1,21 @@
 ;;rcodetools
-(setq rcodetools-file (expand-file-name "x:/Ruby/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rcodetools-0.8.5.0/rcodetools.el" user-emacs-directory))
-(load-file rcodetools-file)
+(autoload 'inf-ruby-minor-mode "inf-ruby" "Run an inferior Ruby process" t)
+(add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
 (with-eval-after-load 'ruby-mode
-  (define-key ruby-mode-map (kbd "C-c C-d") 'xmp)
-  (define-key ruby-mode-map (kbd "C-c c") 'smart-compile)
-  (define-key ruby-mode-map (kbd "C-c C-c") (kbd "C-c c C-m"))
-  )
+  (add-hook 'ruby-mode-hook 'ruby-electric-mode)
+  ;;(define-key ruby-mode-map (kbd "C-;") 'seeing-is-believing-prefix)
+  
+
+  
+)
+;;(setq seeing-is-believing-prefix "C-,")
+;;(setq seeing-is-believing-prefix )
+(setq seeing-is-believing-prefix "C-c ;")
+(add-hook 'ruby-mode-hook 'seeing-is-believing)
+(require 'seeing-is-believing)
+
+
+
 
 (add-to-list 'auto-mode-alist
              '("\\.\\(?:cap\\|gemspec\\|irbrc\\|gemrc\\|rake\\|rb\\|ru\\|thor\\)\\'" . ruby-mode))

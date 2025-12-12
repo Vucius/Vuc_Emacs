@@ -3,7 +3,7 @@
 (global-auto-revert-mode t)
 
 ;;显示全局行号 show linum-mode
-(global-linum-mode t)
+(global-display-line-numbers-mode t)
 
 ;;************alias 缩写***********************
 ;;(abbrev-mode t)
@@ -43,7 +43,7 @@
 
 
 ;;专门给编程mode开启语法检查
-(add-hook 'prog-mode-hook 'flycheck-mode)
+;;(add-hook 'prog-mode-hook 'flycheck-mode)
 
 ;;
 

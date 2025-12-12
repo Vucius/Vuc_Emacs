@@ -17,6 +17,14 @@
 ;;高亮当前行
 (global-hl-line-mode t)
 
+;;图标
+(when (display-graphic-p)
+  (require 'all-the-icons))
+;; or
+
+
+
+
 ;;********************Xcode
 ;;(add-to-list 'load-path (expand-file-name "lisp/xcode-theme" user-emacs-directory))
 ;;(require 'xcode-dark-theme)

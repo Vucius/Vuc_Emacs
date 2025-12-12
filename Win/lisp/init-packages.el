@@ -15,9 +15,11 @@
 		      ;;theme
 		      ;;dream-theme
 		      dracula-theme
-
-
-
+		      restart-emacs
+		      ;;frame
+		      posframe
+		      ;;ui
+		      all-the-icons
 
 		      ;;alert
 		      ;;ruby-hash-syntax
@@ -26,11 +28,16 @@
 
 
 		      ;;translate
+		      
 		      go-translate
-
-
+		      ;;org-mode
+		      ;;
+		      ;;babel
 
 		      ;;Ruby
+		      helm
+		      helm-projectile
+		      helm-ag
 		      ruby-electric
 		      seeing-is-believing
 		      chruby

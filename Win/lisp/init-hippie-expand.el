@@ -2,7 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 
-(setq hippie-expand-try-function-list '(try-expand-debbrev
+(with-eval-after-load 'hippie-expand
+  (setq hippie-expand-try-function-list '(try-expand-debbrev
 					try-expand-debbrev-all-buffers
 					try-expand-debbrev-from-kill
 					try-complete-file-name-partially
@@ -12,7 +13,8 @@
 					try-expand-line
 					try-complete-lisp-symbol-partially
 					try-complete-lisp-symbol))
+  (global-set-key (kbd "s-/") 'hippie-expand)
+  )
 
-(global-set-key (kbd "s-/") 'hippie-expand)
 (provide 'init-hippie-expand)
 ;;; init-hippie-expand.el ends here

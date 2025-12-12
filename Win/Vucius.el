@@ -1,0 +1,40 @@
+;;(package-initialize)
+
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "lisp/Base" user-emacs-directory))
+(defun open-init-file()
+  (interactive)
+  (find-file "~/.emacs.d/init.el"))
+(setq custom-file (locate-user-emacs-file "custom.el"))
+(require 'init-utils)
+(require 'init-packages)
+(require 'init-exec-path) ;; Set up $PATH
+(require 'init-ui)
+(require 'init-dired)
+(require 'init-recentf)
+(require 'init-hippie-expand)
+(require 'init-company)
+;;()
+
+(require 'init-translate)
+(require 'init-helm)
+(require 'init-restart-emacs)
+(require 'init-EAF)
+(require 'eaf)
+(require 'eaf-browser)
+(require 'eaf-pdf-viewer)
+(require 'eaf-js-video-player)
+
+
+
+(require 'init-shell)
+
+
+
+
+(require 'init-better-defaults)
+(require 'init-org)
+(require 'init-keybindings)
+(require 'init-ruby)
+
+;;(require ')
